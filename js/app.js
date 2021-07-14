@@ -9,19 +9,23 @@ let resp;
 for (let i = 0; i < answers.length; i++) {
   answer = answers[i];
   resp = prompt(prompts[i]).charAt(0).toLowerCase();
-  switch (resp === answer) {
-    case true:
-      // console.log('Awesome! You answered correctly!');
-      alert('Awesome! You answered correctly!');
-      break;
-    default:
-      // console.log('Sorry, you answered incorrectly.');
-      alert('Sorry, you answered incorrectly.');
-      break;
-    // default:
-    //   // console.log('You did not enter a proper response');
-    //   alert('You did not enter a proper response.');
-    //   break;
+  if (resp === 'y' || resp === 'n') {
+    switch (resp === answer) {
+      case true:
+        // console.log('Awesome! You answered correctly!');
+        alert('Awesome! You answered correctly!');
+        break;
+      default:
+        // console.log('Sorry, you answered incorrectly.');
+        alert('Sorry, you answered incorrectly.');
+        // break;
+      // default:
+      //   // console.log('You did not enter a proper response');
+      //   alert('You did not enter a proper response.');
+      //   break;
+    }
+  } else {
+    alert('You did not give a proper response.');
   }
 }
 alert('Thank you, ' + userName + ', for playing my game!');
