@@ -8,24 +8,48 @@ body {
   overflow: hidden;
   position: relative;
   width: 100%;
-  height: 100%;
+  height: auto;
 }
-.background {
+/* .background {
   opacity: 0.6;
   position: absolute;
   left: 0;
   top: 0;
   width: 100%;
   height: 100%;
-}
+} */
 .content {
   position: relative;
 }
 header {
-  border: 5px ;
+  border: 5px black solid;
+  padding: auto;
+  text-align: center;
+  font-size: 4em;
 }
-img {
+#portrait {
+  padding-top: 2em;
+  padding-left: 2em;
+  width: 40%;
+}
+#sectionItem {
+  width: 100%;
+}
+section {
+  width: 100%;
+}
+div#bio {
+  position: relative;
+  padding-top: 6em;
+  padding-right: 4em;
+  float: right;
+  width: 49%;
 
+}
+div#bio > h1 {
+  margin-bottom: 2em;
+  text-align: center;
+  font-size: 2em;
 }
 main {
 
