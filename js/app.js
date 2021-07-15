@@ -10,9 +10,9 @@ const favSports = ['hockey', 'football', 'soccer'];
 let userName = prompt('Welcome to my site! Please enter your name.');
 alert('You may answer the following using either yes/no or y/n.');
 for (let i = 0; i < prompts.length; i++) {
-  answer = answers[i];
-  resp = prompt(prompts[i]).charAt(0).toLowerCase();
   if (i < 5) {
+    answer = answers[i];
+    resp = prompt(prompts[i]).charAt(0).toLowerCase();
     if (resp === 'y' || resp === 'n') {
       switch (resp === answer) {
         case true:
