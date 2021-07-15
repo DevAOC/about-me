@@ -27,11 +27,10 @@ for (let i = 0; i < prompts.length; i++) {
     } else {
       alert('You did not give a proper response.');
     }
-  } else 
-  if (i === 5) {//Number question
+  } else if (i === 5) {//Number question
     let correct = false;
     let attempts = 0;
-    while (!correct && attempts !== 4) {
+    while (!correct && attempts < 4) {
       resp = prompt(prompts[i]);
       // console.log(resp);
       if (isNaN(resp)) {
@@ -53,7 +52,7 @@ for (let i = 0; i < prompts.length; i++) {
   } else { //Fav sport question
     let correct = false;
     let attempts = 0;
-    while (!correct && attempts !== 6) {
+    while (!correct && attempts < 6) {
       resp = prompt(prompts[i]).toLowerCase();
       for (let i = 0; i < favSports.length; i++) {
         if (resp === favSports[i]) {
