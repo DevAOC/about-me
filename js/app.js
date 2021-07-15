@@ -27,25 +27,23 @@ for (let i = 0; i < prompts.length; i++) {
     } else {
       alert('You did not give a proper response.');
     }
-  } else if (i === 6) {//Number question
+  } else 
+  if (i === 5) {//Number question
     let correct = false;
     let attempts = 0;
-    while (!correct || attempts !== 4) {
-      resp = parseInt(prompt(i));
-      console.log(resp);
-      switch (resp) {
-        case isNaN(resp):
-          alert('You did not enter a number.');
-          break;
-        case resp > randomNum:
-          alert('Too high, try again!');
-          break;
-        case resp < randomNum:
-          alert('Too low, try again!');
-          break;
-          default:
-            correct = true;
-            score++;
+    while (!correct && attempts !== 4) {
+      resp = prompt(prompts[i]);
+      // console.log(resp);
+      if (isNaN(resp)) {
+        alert('You did not enter a number.');
+      } else if (resp > randomNum) {
+        alert('Too high, try again!');
+      } else if (resp < randomNum) {
+        alert('Too low, try again!');
+      } else {
+        alert('You got it right!');
+        correct = true;
+        score++;
       }
       attempts++;
     }
@@ -55,14 +53,13 @@ for (let i = 0; i < prompts.length; i++) {
   } else { //Fav sport question
     let correct = false;
     let attempts = 0;
-    while (!correct || attempts !== 6) {
-      resp = prompt(i).toLowerCase();
+    while (!correct && attempts !== 6) {
+      resp = prompt(prompts[i]).toLowerCase();
       for (let i = 0; i < favSports.length; i++) {
         if (resp === favSports[i]) {
           alert('Nice job! You guessed one of my favorite sports!');
           correct = true;
           score++;
-          break;
         }
       }
       if (!correct && attempts === 6) {
