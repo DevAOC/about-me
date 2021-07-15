@@ -1,4 +1,4 @@
-# LAB - Number
+# LAB - Number 3
 
 ## About Me
 
@@ -11,5 +11,6 @@ This project is a page with resume style information and a small biography. It a
 * Any Links you used as reference
 
 ### Reflections and Comments
-* Consider including the answers to your daily journal and submission questions here
-* This is also a good place to reflect on the tools and resources used and learned
+
+Lab 4 Driver: Abinash Shrestha
+Lab 4 Navigator: Antoine Charette
