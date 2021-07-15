@@ -30,9 +30,13 @@ for (let i = 0; i < prompts.length; i++) {
   } else if (i === 6) {//Number question
     let correct = false;
     let attempts = 0;
-    resp = prompt(i);
     while (!correct || attempts !== 4) {
+      resp = parseInt(prompt(i));
+      console.log(resp);
       switch (resp) {
+        case isNaN(resp):
+          alert('You did not enter a number.');
+          break;
         case resp > randomNum:
           alert('Too high, try again!');
           break;
@@ -44,6 +48,9 @@ for (let i = 0; i < prompts.length; i++) {
             score++;
       }
       attempts++;
+    }
+    if (!correct) {
+      alert('Sorry, the correct number was ' + randomNum + ', better luck next time!');
     }
   } else { //Fav sport question
     let correct = false;
@@ -59,7 +66,7 @@ for (let i = 0; i < prompts.length; i++) {
         }
       }
       if (!correct && attempts === 6) {
-        alert('Sorry, you were incorrect and are out of guesses.');
+        alert('Sorry, you were incorrect and are out of guesses. The possible answers were ' + favSports.join(', '));
       } else if (!correct) {
         alert('Sorry, you were incorrect. Please try again!');
       }
