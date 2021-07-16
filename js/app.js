@@ -1,12 +1,12 @@
 /* eslint-disable indent */
 'use strict';
-let answer;
 let resp;
 let currentScore = 0;
-const randomNum = Math.floor(Math.random() * 101);
+const randomNum = Math.floor(Math.random() * 100);
 const prompts = ['Have I played on a State Championship winning football team?', 'Was I born in the United States of America?', 'Did I start university at 16 years old?', 'Have I previously attempted to obtain a bachelor\'s degree in Computer Science?', 'Have I attended culinary school and graduated with honors?', 'Guess a number between 0 and 100. (You have 4 attempts)', 'What is my favorite sport? (This time you\'ll have 6 attempts'];
 const answers = ['y', 'n', 'y', 'n', 'y', randomNum, 'hockey', 'football', 'soccer'];
 let userName = prompt('Welcome to my site! Please enter your name.');
+playGame();
 function playGame() {
   alert('You may answer the following using either yes/no or y/n.');
   for (let i = 0; i < prompts.length; i++) {
