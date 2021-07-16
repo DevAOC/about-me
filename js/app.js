@@ -19,7 +19,7 @@ function playGame() {
         break;
       default:
         type1(i);
-    } 
+    }
   }
   alert('Thank you, ' + userName + ', for playing! You got ' + currentScore + ' correct out of 7!');
 }
